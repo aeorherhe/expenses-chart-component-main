@@ -32,7 +32,11 @@ window.addEventListener("DOMContentLoaded", function () {
         let amount = weekday.querySelector(".amount-spent");
         let curWeekday = weekday.querySelector(".weekday");
         amount = amount.textContent * 2.5;
-        chartbar.style.height = `${amount}px`;
+        chartbar.style.height = `0`;
+
+        setTimeout(() => {
+          chartbar.style.height = `${amount}px`;
+        }, 100);
 
         // display price on mouseover
         chartbar.addEventListener("mouseover", () => {
